@@ -66,11 +66,11 @@ function forms (calcData) {
 
             const data = new FormData (form);
 
-            // if (form.classList.contains('calc_form')) {
+            if (form.classList.contains('calc_form')) {
                 for (let key in calcData) {
                     data.append(key, calcData[key]);
                 }
-            // }
+            }
 
             let api;
             form.closest('.popup-design') || form.classList.contains('calc_form') ? api = path.designer : api = path.question;
